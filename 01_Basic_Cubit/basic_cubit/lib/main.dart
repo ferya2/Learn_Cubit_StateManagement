@@ -1,9 +1,26 @@
+import 'package:basic_cubit/bloc/counter.dart';
+import 'package:basic_cubit/blocprovider/bloc_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+        create: (context) => Counter(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: BlocProviderPage(),
+        ));
+  }
+}
 
 class CounterCubit extends Cubit<int> {
   CounterCubit({this.initialData = 0}) : super(initialData);
@@ -33,17 +50,6 @@ class CounterCubit extends Cubit<int> {
   void onError(Object error, StackTrace stackTrace) {
     super.onError(error, stackTrace);
     print(error);
-  }
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-    );
   }
 }
 

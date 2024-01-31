@@ -13,4 +13,7 @@
 7. Bloc Consumer:
     Bloc Consumer adalah alat yang menggabungkan ide dari Bloc Builder dan Bloc Listener. Ini membantu kita membangun bagian dari aplikasi yang bereaksi terhadap perubahan dan juga mengambil tindakan tertentu saat peristiwa terjadi.
 8. Bloc Provider:
+    Bloc Provider adalah bagian dari paket flutter_bloc yang membantu dalam mengelola dan menyediakan Bloc ke berbagai bagian dari aplikasi Flutter. Ini berguna untuk menyusun dan mendistribusikan Bloc agar dapat diakses di seluruh aplikasi dengan cara yang terstruktur. 
     Bloc Provider membantu kita memberikan Bloc ke bagian-bagian aplikasi yang membutuhkannya. Ini membantu kita mengorganisir dan menyediakan Bloc ke bagian-bagian aplikasi yang membutuhkannya.
+9. Dependency Injection adalah kita meng injeksi suatu depedency dari atas ketika diatas sudah di injeksi semua child yang ada dibawahnya itu dapat mengakses
+    
